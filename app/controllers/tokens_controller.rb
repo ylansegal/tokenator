@@ -12,6 +12,10 @@ class TokensController < ApplicationController
     respond_with @token
   end
 
+  def show
+    @token = current_user.tokens.find(params[:id])
+  end
+
   private
 
   def token_params
