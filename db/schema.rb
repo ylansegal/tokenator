@@ -11,7 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130906185910) do
+ActiveRecord::Schema.define(version: 20130906210943) do
+
+  create_table "tokens", force: true do |t|
+    t.string   "name"
+    t.string   "secret"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "tokens", ["user_id"], name: "index_tokens_on_user_id"
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
