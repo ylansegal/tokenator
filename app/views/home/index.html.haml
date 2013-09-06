@@ -1,2 +1,5 @@
 %h3 Tokens
-%p Tokens will be listed here here
+- @tokens.each do |token|
+  %p
+    = token.name
+    = token.code
