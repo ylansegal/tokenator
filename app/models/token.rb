@@ -4,6 +4,6 @@ class Token < ActiveRecord::Base
   validates :name, :secret, :presence => true
 
   def code
-    ROTP::TOTP.new(secret)
+    ROTP::TOTP.new(self.secret).now
   end
 end
