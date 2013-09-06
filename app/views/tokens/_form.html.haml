@@ -1,3 +1,4 @@
+= render :partial => 'shared/errors', :locals => { :model => @token }
 = form_for @token do |f|
   %p
     = f.label :name
