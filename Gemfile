@@ -42,3 +42,22 @@ gem 'jbuilder', '~> 1.2'
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
+gem 'devise'
+gem 'haml-rails'
+gem 'puma'
+
+group :development do
+  gem 'html2haml'
+  gem 'quiet_assets'
+end
+
+group :development, :test do
+  gem 'rspec-rails'
+end
+
+group :test do
+  gem 'database_cleaner', '1.0.1'
+  gem 'email_spec'
+end
+
