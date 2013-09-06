@@ -1,0 +1,9 @@
+= form_for @token do |f|
+  %p
+    = f.label :name
+    = f.text_field :name
+  %p
+    = f.label :secret
+    = f.text_field :secret
+  %p
+    = f.submit
