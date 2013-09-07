@@ -3,6 +3,10 @@ class TokensController < ApplicationController
 
   respond_to :html
 
+  def index
+    @tokens = current_user.tokens
+  end
+
   def new
     @token = current_user.tokens.new
   end
@@ -23,6 +27,12 @@ class TokensController < ApplicationController
   def update
     @token = current_user.tokens.find(params[:id])
     @token.update_attributes(token_params)
+    respond_with @token
+  end
+
+  def destroy
+    @token = current_user.tokens.find(params[:id])
+    @token.destroy
     respond_with @token
   end
 

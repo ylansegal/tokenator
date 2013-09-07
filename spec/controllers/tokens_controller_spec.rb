@@ -58,4 +58,23 @@ describe TokensController do
 
     end
   end
+
+  context 'GET index' do
+    it 'lists all users tokens' do
+      # force evaluation
+      token
+      user
+
+      get :index
+      assigns(:tokens).should include(token)
+      response.should render_template('index')
+    end
+  end
+
+  context 'DELETE destroy' do
+    it 'deletes the token and redirect to index' do
+      delete :destroy, :id => token.to_param
+      response.should redirect_to(tokens_path)
+    end
+  end
 end
