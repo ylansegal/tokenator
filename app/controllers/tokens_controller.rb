@@ -16,6 +16,16 @@ class TokensController < ApplicationController
     @token = current_user.tokens.find(params[:id])
   end
 
+  def edit
+    show
+  end
+
+  def update
+    @token = current_user.tokens.find(params[:id])
+    @token.update_attributes(token_params)
+    respond_with @token
+  end
+
   private
 
   def token_params
