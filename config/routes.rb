@@ -3,5 +3,5 @@ Tokenator::Application.routes.draw do
 
   resources :tokens
 
-  root :to => "tokens#index"
+  root :to => "home#index"
 end
