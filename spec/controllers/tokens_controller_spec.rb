@@ -24,8 +24,9 @@ describe TokensController do
       response.should render_template('new')
     end
 
-    it 'redirects to show if created' do
+    it 'redirects and sets flash if created' do
       post :create, :token => FactoryGirl.attributes_for(:token)
+      flash[:notice].should =~ /success/
       response.should redirect_to(tokens_path)
     end
   end
@@ -33,7 +34,12 @@ describe TokensController do
   context 'GET edit' do
     it 'shows form for editing' do
       get :edit, :id => token.to_param
-      assigns(:token).should == token
+      assigns(:token).id.should == token.id
+    end
+
+    it 'does not show secret' do
+      get :edit, :id => token.to_param
+      assigns(:token).secret.should be_blank
     end
   end
 
@@ -43,12 +49,12 @@ describe TokensController do
       response.should render_template('edit')
     end
 
-    it 'redirects to show if updated' do
+    it 'redirects and sets flash if updated' do
       name = "New name"
       put :update, :token => token.attributes.merge(:name => name), :id => token.to_param
       assigns(:token).name.should == name
-      response.should redirect_to(token_path(assigns(:token)))
-
+      flash[:notice].should =~ /success/
+      response.should redirect_to(tokens_path)
     end
   end
 

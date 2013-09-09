@@ -13,17 +13,20 @@ class TokensController < ApplicationController
 
   def create
     @token = current_user.tokens.create(token_params)
+    flash[:notice] = "#{@token.name} created successfully"
     respond_with @token, :location => tokens_path
   end
 
   def edit
     @token = token
+    @token.secret = nil
   end
 
   def update
     @token = token
     @token.update_attributes(token_params)
-    respond_with @token
+    flash[:notice] = "#{@token.name} updated successfully"
+    respond_with @token, :location => tokens_path
   end
 
   def destroy
