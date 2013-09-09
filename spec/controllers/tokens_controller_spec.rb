@@ -75,6 +75,7 @@ describe TokensController do
     it 'deletes the token and redirect to index' do
       delete :destroy, :id => token.to_param
       response.should redirect_to(tokens_path)
+      flash[:notice].should =~ /success/
     end
   end
 end

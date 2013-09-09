@@ -33,6 +33,7 @@ class TokensController < ApplicationController
   def destroy
     @token = current_user.tokens.find(params[:id])
     @token.destroy
+    flash[:notice] = 'Token deleted successfully'
     respond_with @token
   end
 
