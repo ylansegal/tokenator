@@ -26,14 +26,7 @@ describe TokensController do
 
     it 'redirects to show if created' do
       post :create, :token => FactoryGirl.attributes_for(:token)
-      response.should redirect_to(token_path(assigns(:token)))
-    end
-  end
-
-  context 'GET show' do
-    it 'shows a token' do
-      get :show, :id => token.to_param
-      assigns(:token).should == token
+      response.should redirect_to(tokens_path)
     end
   end
 

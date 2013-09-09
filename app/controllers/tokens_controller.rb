@@ -13,31 +13,31 @@ class TokensController < ApplicationController
 
   def create
     @token = current_user.tokens.create(token_params)
-    respond_with @token
-  end
-
-  def show
-    @token = current_user.tokens.find(params[:id])
+    respond_with @token, :location => tokens_path
   end
 
   def edit
-    show
+    @token = token
   end
 
   def update
-    @token = current_user.tokens.find(params[:id])
+    @token = token
     @token.update_attributes(token_params)
     respond_with @token
   end
 
   def destroy
-    @token = current_user.tokens.find(params[:id])
+    @token = token
     @token.destroy
     flash[:notice] = 'Token deleted successfully'
     respond_with @token
   end
 
   private
+
+  def token
+    current_user.tokens.find(params[:id])
+  end
 
   def token_params
     params.require(:token).permit(:name, :secret)
