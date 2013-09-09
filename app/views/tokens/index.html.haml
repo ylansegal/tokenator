@@ -1,7 +1,26 @@
-%h3 Tokens
-- @tokens.each do |token|
-  %p
-    = token.name
-    = token.code
-    = link_to '->', token
-%p= link_to 'Add Token', new_token_path
+%h1 Tokens
+%p
+  = link_to new_token_path, :class => 'btn btn-primary  ' do
+    %i.icon-plus.icon-plus.icon-white
+    Add Token
+%table.table.table-bordered.table-hover
+  %tr
+    %th Token
+    %th OTP
+    %th
+  %tbody
+    - @tokens.each do |token|
+      %tr
+        %td= token.name
+        %td
+          %strong= token.code
+        %td
+          = link_to token, :class => 'btn' do
+            %i.icon-edit
+            Edit
+          = link_to token_path(token),
+                    :method => :delete,
+                    :data => { :confirm => "Are you sure you want to delete #{token.name}?" },
+                    :class => 'btn btn-danger' do
+            %i.icon-trash.icon-white
+            Delete
