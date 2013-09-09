@@ -14,13 +14,16 @@ group :test do
   gem "factory_girl_rails", "~> 4.2"
 end
 
+group :development, :test do
+  gem "sqlite3", "~> 1.3"
+end
+
 group :production do
   gem 'rails_12factor'
   gem 'pg'
 end
 
 gem "rails", "~> 4.0"
-gem "sqlite3", "~> 1.3"
 gem "sass-rails", "~> 4.0"
 gem "uglifier", "~> 2.2"
 gem "coffee-rails", "~> 4.0"
