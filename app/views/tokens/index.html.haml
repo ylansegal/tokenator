@@ -15,7 +15,7 @@
         %td
           %strong= token.code
         %td
-          = link_to token, :class => 'btn' do
+          = link_to edit_token_path(token), :class => 'btn' do
             %i.icon-edit
             Edit
           = link_to token_path(token),
