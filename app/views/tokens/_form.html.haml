@@ -1,4 +1,5 @@
 = simple_form_for @token do |f|
   = f.input :name
   = f.input :secret
-  = f.button :submit
+  = f.button :submit, :class => 'btn btn-primary'
+  = link_to 'Cancel', tokens_path, :class => 'btn'
