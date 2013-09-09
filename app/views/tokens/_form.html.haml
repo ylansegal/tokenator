@@ -1,10 +1,4 @@
-= render :partial => 'shared/errors', :locals => { :model => @token }
-= form_for @token do |f|
-  %p
-    = f.label :name
-    = f.text_field :name
-  %p
-    = f.label :secret
-    = f.text_field :secret
-  %p
-    = f.submit
+= simple_form_for @token do |f|
+  = f.input :name
+  = f.input :secret
+  = f.button :submit

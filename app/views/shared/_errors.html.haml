@@ -1,7 +1,0 @@
-.errors
-  - if model.errors.any?
-    = pluralize(model.errors.count, 'errors')
-    found:
-    %ul
-      - model.errors.full_messages.each do |message|
-        %li= message
