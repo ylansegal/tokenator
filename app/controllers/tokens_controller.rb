@@ -19,7 +19,6 @@ class TokensController < ApplicationController
 
   def edit
     @token = token
-    @token.secret = nil
   end
 
   def update

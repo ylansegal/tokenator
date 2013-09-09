@@ -36,11 +36,6 @@ describe TokensController do
       get :edit, :id => token.to_param
       assigns(:token).id.should == token.id
     end
-
-    it 'does not show secret' do
-      get :edit, :id => token.to_param
-      assigns(:token).secret.should be_blank
-    end
   end
 
   context 'PUT update' do
