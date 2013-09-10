@@ -4,7 +4,7 @@ class TokensController < ApplicationController
   respond_to :html
 
   def index
-    @tokens = current_user.tokens
+    @tokens = current_user.tokens.by_created_at
   end
 
   def new

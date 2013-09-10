@@ -6,6 +6,8 @@ class Token < ActiveRecord::Base
 
   before_validation :normalize_secret
 
+  scope :by_created_at, -> { order(:created_at) }
+
   def code
     ROTP::TOTP.new(self.secret).now
   end
