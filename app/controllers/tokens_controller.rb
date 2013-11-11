@@ -13,7 +13,7 @@ class TokensController < ApplicationController
 
   def create
     @token = current_user.tokens.create(token_params)
-    flash[:notice] = "#{@token.name} created successfully"
+    flash[:notice] = "#{@token.name} created successfully" if @token.errors.blank?
     respond_with @token, :location => tokens_path
   end
 

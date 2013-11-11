@@ -21,6 +21,7 @@ describe TokensController do
     it 'renders errors if present' do
       post :create, {:token => {:name => ''} }
       assigns(:token).should be_new_record
+      flash[:notice].should be_nil
       response.should render_template('new')
     end
 
