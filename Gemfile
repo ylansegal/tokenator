@@ -1,5 +1,5 @@
 source "https://rubygems.org"
-ruby "2.0.0"
+ruby "2.1.0"
 
 group :development do
   gem "html2haml", "~> 1.0"
