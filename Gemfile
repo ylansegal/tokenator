@@ -4,11 +4,9 @@ ruby "2.1.0"
 group :development do
   gem "html2haml", "~> 1.0"
   gem "quiet_assets", "~> 1.0"
-  gem "rspec-rails", "~> 2.14"
 end
 
 group :test do
-  gem "rspec-rails", "~> 2.14"
   gem "database_cleaner", "~> 1.0"
   gem "email_spec", "~> 1.5"
   gem "factory_girl_rails", "~> 4.2"
@@ -16,6 +14,7 @@ end
 
 group :development, :test do
   gem "sqlite3", "~> 1.3"
+  gem "rspec-rails", "~> 3.0.0.beta1"
 end
 
 group :production do
