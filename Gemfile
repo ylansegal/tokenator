@@ -9,6 +9,7 @@ end
 
 group :test do
   gem "rspec-rails", "~> 2.14"
+  gem 'minitest', '~> 5.2.0'
   gem "database_cleaner", "~> 1.0"
   gem "email_spec", "~> 1.5"
   gem "factory_girl_rails", "~> 4.2"
@@ -23,7 +24,7 @@ group :production do
   gem 'pg'
 end
 
-gem "rails", "~> 4.0"
+gem "rails", "4.1.0.beta1"
 gem "sass-rails", "~> 4.0"
 gem "uglifier", "~> 2.2"
 gem "coffee-rails", "~> 4.0"
