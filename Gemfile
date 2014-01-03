@@ -32,6 +32,6 @@ gem "jbuilder", "~> 2.0.1"
 gem "devise", "~> 3.1"
 gem "haml-rails", "~> 0.4"
 gem "puma", "~> 2.5"
-gem "rotp", "~> 1.4", git: 'https://github.com/ylansegal/rotp.git', branch: 'feature/remove_deprecation_warnings'
+gem "rotp", "~> 1.6.1"
 gem "bootstrap-sass", "~> 2.3.2"
 gem "simple_form", "~> 3.0.0rc"
