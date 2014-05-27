@@ -1,5 +1,5 @@
 source "https://rubygems.org"
-ruby "2.1.1"
+ruby "2.1.2"
 
 group :development do
   gem "html2haml", "~> 1.0"
@@ -14,7 +14,7 @@ end
 
 group :development, :test do
   gem "sqlite3", "~> 1.3"
-  gem "rspec-rails", "~> 3.0.0.beta2"
+  gem "rspec-rails", "~> 3.0.0.rc1"
 end
 
 group :production do

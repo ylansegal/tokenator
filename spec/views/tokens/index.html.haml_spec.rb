@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'tokens/index.html.haml' do
+describe 'tokens/index.html.haml', type: :view do
   it 'displays tokens starting with zero' do
     token = FactoryGirl.create(:token)
     expect(token).to receive(:code).and_return(12345)

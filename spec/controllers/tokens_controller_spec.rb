@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe TokensController do
+describe TokensController, type: :controller do
   render_views
 
   let(:user) { FactoryGirl.create(:user) }
