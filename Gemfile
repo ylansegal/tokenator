@@ -22,13 +22,13 @@ group :production do
   gem 'pg'
 end
 
-gem "rails", "4.1.1"
+gem "rails", "4.1.2"
 gem "sass-rails", "~> 4.0"
 gem "uglifier", "~> 2.2"
 gem "coffee-rails", "~> 4.0"
 gem "jquery-rails", "~> 3.0"
 gem "turbolinks", "~> 2.1"
-gem "jbuilder", "~> 2.0.1"
+gem "jbuilder", "~> 2.1.1"
 gem "devise", "~> 3.1"
 gem "haml-rails", "~> 0.4"
 gem "puma", "~> 2.5"
