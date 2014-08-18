@@ -13,7 +13,7 @@
       %tr
         %td= token.name
         %td
-          %strong= "%06d" % token.code
+          %strong= token.code
         %td
           .btn-grp
             = link_to edit_token_path(token), :class => 'btn' do
