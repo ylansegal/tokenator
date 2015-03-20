@@ -2,7 +2,6 @@ source 'https://rubygems.org'
 ruby '2.2.1'
 
 group :development do
-  gem 'html2haml', '~> 1.0'
   gem 'quiet_assets', '~> 1.0'
 end
 

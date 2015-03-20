@@ -212,7 +212,6 @@ DEPENDENCIES
   email_spec (~> 1.5)
   factory_girl_rails (~> 4.2)
   haml-rails (~> 0.4)
-  html2haml (~> 1.0)
   jbuilder (~> 2.1)
   jquery-rails (~> 4.0)
   pg
