@@ -14,7 +14,7 @@ class TokensController < ApplicationController
   def create
     @token = current_user.tokens.create(token_params)
     flash[:notice] = "#{@token.name} created successfully" if @token.errors.blank?
-    respond_with @token, :location => tokens_path
+    respond_with @token, location: tokens_path
   end
 
   def edit
@@ -25,13 +25,13 @@ class TokensController < ApplicationController
     @token = token
     @token.update_attributes(token_params)
     flash[:notice] = "#{@token.name} updated successfully"
-    respond_with @token, :location => tokens_path
+    respond_with @token, location: tokens_path
   end
 
   def destroy
     @token = token
     @token.destroy
-    flash[:notice] = 'Token deleted successfully'
+    flash[:notice] = "Token deleted successfully"
     respond_with @token
   end
 

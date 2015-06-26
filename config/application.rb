@@ -1,4 +1,4 @@
-require File.expand_path('../boot', __FILE__)
+require File.expand_path("../boot", __FILE__)
 
 # Pick the frameworks you want:
 require "active_record/railtie"
@@ -13,13 +13,9 @@ Bundler.require(:default, Rails.env)
 
 module Tokenator
   class Application < Rails::Application
-
     # don't generate RSpec tests for views and helpers
     config.generators do |g|
       g.test_framework :rspec
-
-
-
 
       g.view_specs false
       g.helper_specs false
