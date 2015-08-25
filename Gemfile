@@ -1,5 +1,5 @@
 source "https://rubygems.org"
-ruby "2.2.2"
+ruby "2.2.3"
 
 group :development do
   gem "quiet_assets", "~> 1.0"
@@ -21,7 +21,7 @@ group :production do
   gem "pg"
 end
 
-gem "rails", "4.2.3"
+gem "rails", "4.2.4"
 gem "rack", "~> 1.6.2"
 gem "sass"
 gem "sass-rails", "~> 5.0"
