@@ -1,10 +1,10 @@
 class Token < ActiveRecord::Base
   belongs_to :user
 
+  before_validation :normalize_secret
+
   validates :name, :secret, presence: true
   validate :secret_is_valid_base32
-
-  before_validation :normalize_secret
 
   scope :by_created_at, -> { order(:created_at) }
 
@@ -15,8 +15,8 @@ class Token < ActiveRecord::Base
   private
 
   def secret_is_valid_base32
-    code
-  rescue
+    code if secret
+  rescue ROTP::Base32::Base32Error
     errors.add :secret, "is not a valid base32 secret"
   end
 
