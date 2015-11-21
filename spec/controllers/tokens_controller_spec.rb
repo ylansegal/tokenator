@@ -11,7 +11,7 @@ describe TokensController, type: :controller do
   end
 
   context "GET new" do
-    it "show show form for new token" do
+    it "shows form for new token" do
       get :new
       assigns(:token).should be_new_record
     end
