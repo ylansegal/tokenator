@@ -1,6 +1,16 @@
-  _____ ___  _  _______ _   _    _  _____ ___  ____  
- |_   _/ _ \| |/ / ____| \ | |  / \|_   _/ _ \|  _ \ 
+  _____ ___  _  _______ _   _    _  _____ ___  ____
+ |_   _/ _ \| |/ / ____| \ | |  / \|_   _/ _ \|  _ \
    | || | | | ' /|  _| |  \| | / _ \ | || | | | |_) |
-   | || |_| | . \| |___| |\  |/ ___ \| || |_| |  _ < 
+   | || |_| | . \| |___| |\  |/ ___ \| || |_| |  _ <
    |_| \___/|_|\_\_____|_| \_/_/   \_\_| \___/|_| \_\
-                                                     
+
+
+This Rails application is a One-Time Password generator, on the web. It serves the same functionality as Google Authenticator.
+
+You can see it live at https://tokenator.herokuapp.com/
+
+### License
+
+This code is provided as is and licensed under the MIT License.
+
+Copyright (c) 2013-2015 by Ylan Segal
