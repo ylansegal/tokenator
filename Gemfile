@@ -22,7 +22,7 @@ group :production do
   gem "pg"
 end
 
-gem "rails", "4.2.5"
+gem "rails", "4.2.5.1"
 gem "rack", "~> 1.6.2"
 gem "sass"
 gem "sass-rails", "~> 5.0"
