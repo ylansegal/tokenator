@@ -13,7 +13,10 @@
 
 ActiveRecord::Schema.define(version: 20130906210943) do
 
-  create_table "tokens", force: true do |t|
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
+  create_table "tokens", force: :cascade do |t|
     t.string   "name"
     t.string   "secret"
     t.integer  "user_id"
@@ -21,9 +24,9 @@ ActiveRecord::Schema.define(version: 20130906210943) do
     t.datetime "updated_at"
   end
 
-  add_index "tokens", ["user_id"], name: "index_tokens_on_user_id"
+  add_index "tokens", ["user_id"], name: "index_tokens_on_user_id", using: :btree
 
-  create_table "users", force: true do |t|
+  create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
     t.string   "reset_password_token"
@@ -39,7 +42,7 @@ ActiveRecord::Schema.define(version: 20130906210943) do
     t.string   "name"
   end
 
-  add_index "users", ["email"], name: "index_users_on_email", unique: true
-  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+  add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
+  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
 end
