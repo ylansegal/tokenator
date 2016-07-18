@@ -27,14 +27,6 @@ describe User do
     end
   end
 
-  it "rejects invalid email addresses" do
-    addresses = %w(user@foo,com user_at_foo.org example.user@foo.)
-    addresses.each do |address|
-      invalid_email_user = User.new(@attr.merge(email: address))
-      invalid_email_user.should_not be_valid
-    end
-  end
-
   it "rejects duplicate email addresses" do
     User.create!(@attr)
     user_with_duplicate_email = User.new(@attr)
