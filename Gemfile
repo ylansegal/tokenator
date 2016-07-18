@@ -5,6 +5,7 @@ group :test do
   gem "database_cleaner", "~> 1.0"
   gem "email_spec", "~> 1.5"
   gem "factory_girl_rails", "~> 4.2"
+  gem "rails-controller-testing", "~> 0.1.1"
 end
 
 group :development, :test do
@@ -18,14 +19,14 @@ group :production do
   gem "pg"
 end
 
-gem "rails", "4.2.7"
-gem "rack", "~> 1.6.2"
+gem "rails", "5.0.0"
+gem "rack", "~> 2.0.0"
 gem "sass"
 gem "sass-rails", "~> 5.0"
 gem "uglifier", "~> 2.2"
 gem "coffee-rails", "~> 4.0"
-gem "jquery-rails", "~> 4.0"
-gem "turbolinks", "~> 2.1"
+gem "jquery-rails"
+gem "turbolinks", "~> 5"
 gem "jbuilder", "~> 2.1"
 gem "devise", "~> 4.2"
 gem "haml-rails", "~> 0.4"
