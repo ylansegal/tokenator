@@ -1,10 +1,6 @@
 source "https://rubygems.org"
 ruby "2.3.1"
 
-group :development do
-  gem "quiet_assets", "~> 1.0"
-end
-
 group :test do
   gem "database_cleaner", "~> 1.0"
   gem "email_spec", "~> 1.5"
