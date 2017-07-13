@@ -1,0 +1,25 @@
+---
+- - :whitelist
+  - MIT
+  - :who:
+    :why:
+    :versions: []
+    :when: 2017-07-13 16:17:33.060064000 Z
+- - :whitelist
+  - Apache 2.0
+  - :who:
+    :why:
+    :versions: []
+    :when: 2017-07-13 16:18:27.550085000 Z
+- - :whitelist
+  - New BSD
+  - :who:
+    :why:
+    :versions: []
+    :when: 2017-07-13 16:20:46.368715000 Z
+- - :whitelist
+  - ISC
+  - :who:
+    :why:
+    :versions: []
+    :when: 2017-07-13 16:21:17.718926000 Z
