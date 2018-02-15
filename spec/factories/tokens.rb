@@ -1,4 +1,4 @@
-FactoryGirl.define do
+FactoryBot.define do
   factory :token do
     name "Great Web Service"
     secret ROTP::Base32.random_base32

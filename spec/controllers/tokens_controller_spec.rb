@@ -3,8 +3,8 @@ require "spec_helper"
 describe TokensController, type: :controller do
   render_views
 
-  let(:user) { FactoryGirl.create(:user) }
-  let(:token) { FactoryGirl.create(:token, user: user) }
+  let(:user) { FactoryBot.create(:user) }
+  let(:token) { FactoryBot.create(:token, user: user) }
 
   before :each do
     sign_in user
@@ -26,7 +26,7 @@ describe TokensController, type: :controller do
     end
 
     it "redirects and sets flash if created" do
-      post :create, params: { token: FactoryGirl.attributes_for(:token) }
+      post :create, params: { token: FactoryBot.attributes_for(:token) }
       flash[:notice].should =~ /success/
       response.should redirect_to(tokens_path)
     end

@@ -4,7 +4,7 @@ describe HomeController, type: :controller do
   render_views
 
   describe "GET 'index'" do
-    let(:user) { FactoryGirl.create(:user) }
+    let(:user) { FactoryBot.create(:user) }
 
     it "should be successful" do
       get :index
