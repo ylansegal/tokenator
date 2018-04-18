@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 ruby "2.5.1"
 
-gem "rails", "5.1.5"
+gem "rails", "5.2.0"
 
 group :test do
   gem "database_cleaner", "~> 1.0"
@@ -32,6 +32,6 @@ gem "rack", "~> 2.0.0"
 gem "rotp", "~> 3.0"
 gem "sass"
 gem "sass-rails", "~> 5.0"
-gem "simple_form", "~> 3.0"
+gem "simple_form", "~> 4.0"
 gem "turbolinks", "~> 5"
 gem "uglifier", "~> 3.1"
