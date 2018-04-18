@@ -8,7 +8,7 @@ describe HomeController, type: :controller do
 
     it "should be successful" do
       get :index
-      response.should be_success
+      response.should be_successful
     end
 
     it "redirects to tokens if signed-in" do
