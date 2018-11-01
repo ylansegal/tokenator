@@ -4,7 +4,10 @@ class TokensController < ApplicationController
   respond_to :html
 
   def index
-    @tokens = current_user.tokens.by_created_at
+    @tokens = current_user
+              .tokens
+              .by_created_at
+              .map { |t| TokenDecorator.new(t) }
   end
 
   def new
