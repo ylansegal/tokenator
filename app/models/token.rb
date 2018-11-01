@@ -21,6 +21,6 @@ class Token < ActiveRecord::Base
   end
 
   def normalize_secret
-    secret && secret.gsub!(" ", "")
+    secret&.delete!(" ")
   end
 end
