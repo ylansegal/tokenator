@@ -26,7 +26,7 @@ class TokensController < ApplicationController
 
   def update
     @token = token
-    @token.update_attributes(token_params)
+    @token.update(token_params)
     flash[:notice] = "#{@token.name} updated successfully"
     respond_with @token, location: tokens_path
   end
