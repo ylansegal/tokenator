@@ -11,6 +11,7 @@ group :test do
 end
 
 group :development, :test do
+  gem "listen", "~> 3.1"
   gem "pry", "~> 0.10"
   gem "rspec-rails", "~> 3.4"
 end
@@ -20,7 +21,7 @@ group :production do
   gem "rails_12factor"
 end
 
-gem 'bootsnap', require: false
+gem "bootsnap", "~> 1.3", require: false
 gem "bootstrap-sass", "~> 2.3.2"
 gem "coffee-rails", "~> 4.0"
 gem "devise", "~> 4.2"
