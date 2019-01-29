@@ -20,6 +20,7 @@ group :production do
   gem "rails_12factor"
 end
 
+gem 'bootsnap', require: false
 gem "bootstrap-sass", "~> 2.3.2"
 gem "coffee-rails", "~> 4.0"
 gem "devise", "~> 4.2"
