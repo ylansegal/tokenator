@@ -25,7 +25,7 @@ gem "bootsnap", "~> 1.3", require: false
 gem "bootstrap-sass", "~> 2.3.2"
 gem "coffee-rails", "~> 4.0"
 gem "devise", "~> 4.2"
-gem "haml-rails", "~> 1.0"
+gem "haml-rails", "~> 2.0"
 gem "jbuilder", "~> 2.1"
 gem "jquery-rails"
 gem "puma", "~> 3.0"
