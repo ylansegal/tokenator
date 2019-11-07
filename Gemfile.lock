@@ -231,7 +231,7 @@ GEM
       sprockets-rails
       tilt
     sexp_processor (4.13.0)
-    simple_form (4.1.0)
+    simple_form (5.0.0)
       actionpack (>= 5.0)
       activemodel (>= 5.0)
     sprockets (4.0.0)
@@ -285,7 +285,7 @@ DEPENDENCIES
   rspec-rails (~> 3.4)
   sass
   sass-rails (~> 6.0)
-  simple_form (~> 4.0)
+  simple_form (~> 5.0)
   turbolinks (~> 5)
   uglifier (~> 4.0)
 
