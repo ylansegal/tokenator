@@ -17,12 +17,14 @@ Copyright (c) 2013-2020 by Ylan Segal
 
 # Local Development
 
+This projects assumes the use of `asdf` for managing `postgres` and node versions,
+and that `.ruby-version` will be respected
+
 ```
 $ git clone ...
 
 $ heroku git:remote -a tokenator
 
-# Configure asdf to know which database to use
-# Check the actual postgres production version before using
-$ echo "postgres 11.6" > .tool-versions
+# create and a config/database.yml file
+$ cp config/database{_sample,}.yml
 ```
