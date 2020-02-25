@@ -13,4 +13,16 @@ You can see it live at https://tokenator.herokuapp.com/
 
 This code is provided as is and licensed under the MIT License.
 
-Copyright (c) 2013-2015 by Ylan Segal
+Copyright (c) 2013-2020 by Ylan Segal
+
+# Local Development
+
+```
+$ git clone ...
+
+$ heroku git:remote -a tokenator
+
+# Configure asdf to know which database to use
+# Check the actual postgres production version before using
+$ echo "postgres 11.6" > .tool-versions
+```
