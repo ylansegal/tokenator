@@ -13,7 +13,7 @@ end
 group :development, :test do
   gem "listen", "~> 3.1"
   gem "pry", "~> 0.10"
-  gem "rspec-rails", "~> 3.4"
+  gem "rspec-rails", "~> 3.0"
 end
 
 group :production do
@@ -30,7 +30,7 @@ gem "jbuilder", "~> 2.1"
 gem "jquery-rails"
 gem "json", ">= 2.3.0"
 gem "puma", "~> 4.3"
-gem "rack", "~> 2.0.8"
+gem "rack", "~> 2.0"
 gem "rotp", "~> 6.0"
 gem "sass"
 gem "sass-rails", "~> 6.0"
