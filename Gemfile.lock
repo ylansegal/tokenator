@@ -147,7 +147,7 @@ GEM
     pry (0.12.2)
       coderay (~> 1.1.0)
       method_source (~> 0.9.0)
-    public_suffix (4.0.3)
+    public_suffix (4.0.4)
     puma (4.3.3)
       nio4r (~> 2.0)
     rack (2.0.9)
@@ -195,8 +195,8 @@ GEM
     responders (3.0.0)
       actionpack (>= 5.0)
       railties (>= 5.0)
-    rotp (5.1.0)
-      addressable (~> 2.5)
+    rotp (6.0.0)
+      addressable (~> 2.7)
     rspec-core (3.9.1)
       rspec-support (~> 3.9.1)
     rspec-expectations (3.9.0)
@@ -283,7 +283,7 @@ DEPENDENCIES
   rails (= 6.0.3)
   rails-controller-testing (~> 1.0)
   rails_12factor
-  rotp (~> 5.1)
+  rotp (~> 6.0)
   rspec-rails (~> 3.4)
   sass
   sass-rails (~> 6.0)
