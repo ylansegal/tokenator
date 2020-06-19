@@ -6,7 +6,7 @@ gem "rails", "6.0.3.2"
 group :test do
   gem "database_cleaner", "~> 1.0"
   gem "email_spec", "~> 2.1"
-  gem "factory_bot_rails", "~> 5.0"
+  gem "factory_bot_rails", "~> 6.0"
   gem "rails-controller-testing", "~> 1.0"
 end
 
