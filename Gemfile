@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 ruby "2.6.6"
 
-gem "rails", "6.0.3.3"
+gem "rails", "6.0.3.4"
 
 group :test do
   gem "database_cleaner", "~> 1.0"
