@@ -19,14 +19,14 @@ describe TokensController, type: :controller do
 
   context "POST create" do
     it "renders errors if present" do
-      post :create, params: { token: { name: "" } }
+      post :create, params: {token: {name: ""}}
       assigns(:token).should be_new_record
       flash[:notice].should be_nil
       response.should render_template("new")
     end
 
     it "redirects and sets flash if created" do
-      post :create, params: { token: FactoryBot.attributes_for(:token) }
+      post :create, params: {token: FactoryBot.attributes_for(:token)}
       flash[:notice].should =~ /success/
       response.should redirect_to(tokens_path)
     end
@@ -34,20 +34,20 @@ describe TokensController, type: :controller do
 
   context "GET edit" do
     it "shows form for editing" do
-      get :edit, params: { id: token.to_param }
+      get :edit, params: {id: token.to_param}
       assigns(:token).id.should == token.id
     end
   end
 
   context "PUT update" do
     it "renders errors if present" do
-      put :update, params: { token: token.attributes.merge("secret" => ""), id: token.to_param }
+      put :update, params: {token: token.attributes.merge("secret" => ""), id: token.to_param}
       response.should render_template("edit")
     end
 
     it "redirects and sets flash if updated" do
       name = "New name"
-      put :update, params: { token: token.attributes.merge("name" => name), id: token.to_param }
+      put :update, params: {token: token.attributes.merge("name" => name), id: token.to_param}
       assigns(:token).name.should be == name
       flash[:notice].should =~ /success/
       response.should redirect_to(tokens_path)
@@ -68,7 +68,7 @@ describe TokensController, type: :controller do
 
   context "DELETE destroy" do
     it "deletes the token and redirect to index" do
-      delete :destroy, params: { id: token.to_param }
+      delete :destroy, params: {id: token.to_param}
       response.should redirect_to(tokens_path)
       flash[:notice].should =~ /success/
     end
