@@ -15,6 +15,7 @@ group :development, :test do
   gem "listen", "~> 3.1"
   gem "pry", "~> 0.10"
   gem "rspec-rails", "~> 4.0"
+  gem "standard", "~> 1.0", ">= 1.0.4"
 end
 
 group :production do
