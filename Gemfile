@@ -4,7 +4,6 @@ ruby "3.0.1"
 gem "rails", "6.1.3.2"
 
 group :test do
-  gem "database_cleaner", "~> 1.0"
   gem "database_cleaner-active_record", "~> 2.0"
   gem "email_spec", "~> 2.1"
   gem "factory_bot_rails", "~> 6.0"
