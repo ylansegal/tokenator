@@ -1,5 +1,5 @@
 source "https://rubygems.org"
-ruby "3.0.2"
+ruby "3.0.3"
 
 gem "rails", "6.1.3.2"
 
@@ -22,7 +22,7 @@ group :production do
   gem "rails_12factor"
 end
 
-gem "bootsnap", "~> 1.3", require: false
+gem 'bootsnap', "~> 1.9", ">= 1.9.3", require: false
 gem "bootstrap-sass", "~> 2.3.2"
 gem "coffee-rails", "~> 5.0"
 gem "devise", "~> 4.2"
