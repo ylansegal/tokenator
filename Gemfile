@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 ruby "3.1.2"
 
-gem "rails", "7.0.3"
+gem "rails", "7.0.3.1"
 
 group :test do
   gem "database_cleaner-active_record", "~> 2.0"
